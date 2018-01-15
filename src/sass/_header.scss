@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5.6rem;
+}
+
+.header__logo {
+  text-decoration: none;
+  display: block;
+  margin-bottom: .1rem;
+}
+
+.header__logo-svg {
+  width: 3.3rem;
+}
+
+.header__logo-description {
+  font-family: GilroyL;
+  font-size: pxToRem(12px);
+  color: #b39c72;
+  letter-spacing: .3rem;
+}
+
+.header__date-container {
+  font-family: GilroyEB;
+  font-size: pxToRem(14px);
+  text-align: right;
+  margin-top: .8rem;
+}
+
+.header__akt-number {
+  margin-bottom: .4rem;
+}
+
+.header__date-time {
+  word-spacing: .1rem;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Akt</title>
+
+  <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="modal.css">
+</head>
+<body>
+  <div class="paper">
+    <div class="container">
+      <header class="header">
+        <div class="header__logo-container">
+          <a href="#" class="header__logo">
+            <svg class="header__logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 32"><defs><style>.cls-1{fill:#222;fill-rule:evenodd;}</style></defs><title>logo</title><g id="Слой_2" data-name="Слой 2"><g id="Слой_1-2" data-name="Слой 1"><path class="cls-1" d="M51.5,28.81,35.17.07a.17.17,0,0,0-.27,0c-.15.15-15,26.4-15,26.4l-3.56-6.13,0-.16a9.54,9.54,0,0,0,6.38-9.12c0-7.14-6.95-9.2-8.47-9.2H0L2.4,6.32H13.27s5.53-.43,5.53,4.86-4.22,5.38-5,5.38H9.36l8.16,14.1a2.65,2.65,0,0,0,2,1.35,2.43,2.43,0,0,0,2.21-1.39C22.21,29.86,35,7.71,35,7.71l9.87,17-10.06-6,3.75,6.69L49,31.52s1.65.69,2.63-.28S51.5,28.81,51.5,28.81ZM.15,11.53V29.37s0,1.75,2.13,1.75a1.84,1.84,0,0,0,2.09-1.83l0-10.35Z"/></g></g></svg>
+          </a>
+          <p class="header__logo-description">rezart</p>
+        </div>
+        <div class="header__date-container">
+          <p class="header__akt-number">Акт № 0022</p>
+          <p class="header__date-time">от 06 ноября 2017</p>
+        </div>
+      </header>
+      <form action="#" class="form">
+        <h2 class="form__title">о приеме выполненных работ <span class="form__title-span">(оказаных услуг)</span></h2>
+        <div class="contract-executors-container">
+          <p class="contract-executors-container__executor"><span class="executor-span">Исполнитель:</span> Digital-агентство Rezart</p>
+          <label class="executor-label"><span class="executor-span">Заказчик: </span><input class="customer-input i_fio" type="text"></label>
+        </div>
+        <div class="form__content">
+          <h3 class="form__list-title">Наименование работ/услуг:</h3>
+          <ul class="form__list">
+            <li class="form__list-item">Проведение брифинга по проекту;</li>
+            <li class="form__list-item">Анализ ниши и конкурентов. Выявление ЦА;</li>
+            <li class="form__list-item">Написание текста для сайта;</li>
+            <li class="form__list-item">Общая стилистика дизайна проекта;</li>
+          </ul>
+          <p class="form__content-text">Вышеперечисленные работы/услуги выполнены полностью и в срок. Заказчик претензий по объему, качеству и срокам оказания услуг претензий не имеет. Все работы утверждены и приняты.</p>
+          <p class="form__content-text">В случае отказа от подписания данного акта по причинам, несоответствующим договору или ТЗ, а так же в случае отсутствия подписи в срок (2 дня), акт считается подписанным, а этап разработки принятым.</p>
+        </div>
+        <div class="signature-block">
+          <div class="contract-executors-container">
+            <p class="contract-executors-container__executor"><span class="executor-span">Исполнитель:</span> Digital-агентство Rezart</p>
+            <label class="executor-label"><span class="executor-span">Заказчик: </span><input class="customer-input b_fio" type="text"></label>
+          </div>
+          <div class="signature-block__date">6 ноября</div>
+          <div class="signature-block__sign-gif" id="anim"></div>
+        </div>
+        <label id="access-check" class="access-checkbox-label">
+          <input id="check" class="checkbox-input" type="checkbox" name="confirm" disabled>
+          <span class="checkbox-description">Я подтверждаю выполнение этапа концепции и принимаю его</span>
+        </label>
+        <div class="button-container">
+          <button type="button" name="send" class="access-btn modal-trigger" data-modal="#myModal" disabled>подтверждаю</button>
+        </div>
+      </form>
+
+      <div id="myModal" class="modal">
+  <div class="modal-content">
+        <span class="bottom-close">&times;</span>
+        <h2 class="modal-title">спасибо!</h2>
+        <p class="modal-paragraph">Мы приняли ваше подтверждение <br> и продолжаем работу над проектом. <span class="modal-span">Хорошего вам дня!</span> </p>
+        <button class="modal-btn">ок</button>
+  </div>
+</div>
+    </div>
+  </div>
+<script src="js/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/modal.js"></script>
+</body>
+</html>
