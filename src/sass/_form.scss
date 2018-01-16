@@ -123,7 +123,8 @@
 }
 
 .access-checkbox-label {
-  display: block;
+  display: flex;
+  align-items: center;
   margin-bottom: 3.5rem;
 }
 
@@ -138,7 +139,6 @@
     display: block;
     position: absolute;
     top: 0;
-    left: .1rem;
     width: .7rem;
     height: .7rem;
     outline: 1px solid #000;
@@ -226,6 +226,10 @@
   .access-btn {
     padding: 1rem 3.2rem;
   }
+
+  .checkbox-input {
+    margin-right: 1rem;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
@@ -241,5 +245,9 @@
 
   .signature-block .contract-executors-container {
     width: 17rem;
+  }
+
+  .checkbox-input {
+    margin-right: 1rem;
   }
 }
