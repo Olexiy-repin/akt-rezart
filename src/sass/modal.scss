@@ -23,12 +23,12 @@ $baseFontSize: 16px;
 
 @keyframes modal-appear {
   from {
-    transform: translate(-50%, -50%) rotateY(90deg);
+    transform: translate(-50%, -50%) rotateY(0deg);
   }
 
   to {
-    // transform: translate(-50%, -50%) rotateY(0deg);
-    transform: rotateY(0deg) translate(-50%, -50%);
+    transform: translate(-50%, -50%) rotateY(0deg);
+    // transform: rotateY(0deg) translate(-50%, -50%);
   }
 }
 
@@ -90,6 +90,9 @@ $baseFontSize: 16px;
   font-size: pxToRem(14px);
   line-height: 1.4;
   letter-spacing: .3px;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .modal-span {
