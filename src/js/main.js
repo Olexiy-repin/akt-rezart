@@ -85,9 +85,7 @@
     const value = $(target).val();
     inputBottom.val(value);
     inputTop.css('border-color', '#b39c72');
-    inputTop.css('margin-top', '7px');
     inputBottom.css('border-color', '#b39c72');
-    inputBottom.css('margin-top', '7px');
 
     if (value) {
       checkbox.enable();
@@ -96,9 +94,7 @@
       button.disable();
       signature.hide();
       inputTop.css('border-color', '#a7a7a7');
-      inputTop.css('margin-top', '0');
       inputBottom.css('border-color', '#a7a7a7');
-      inputBottom.css('margin-top', '0');
     }
   });
 
@@ -106,9 +102,7 @@
     const value = $(target).val();
     inputTop.val(value);
     inputTop.css('border-color', '#b39c72');
-    inputTop.css('margin-top', '7px');
     inputBottom.css('border-color', '#b39c72');
-    inputBottom.css('margin-top', '7px');
 
     if (value) {
       checkbox.enable();
@@ -117,9 +111,7 @@
       button.disable();
       signature.hide();
       inputTop.css('border-color', '#a7a7a7');
-      inputTop.css('margin-top', '0');
       inputBottom.css('border-color', '#a7a7a7');
-      inputBottom.css('margin-top', '0');
     }
   });
 })();

@@ -11,15 +11,17 @@
 }
 
 .header__logo-svg {
-  width: 3.3rem;
+  display: inline-block;
+  width: pxToRem(54px);
+  height: pxToRem(50px);
 }
 
-.header__logo-description {
-  font-family: GilroyL;
-  font-size: pxToRem(12px);
-  color: #b39c72;
-  letter-spacing: .3rem;
-}
+// .header__logo-description {
+//   font-family: GilroyL;
+//   font-size: pxToRem(12px);
+//   color: #b39c72;
+//   letter-spacing: .3rem;
+// }
 
 .header__date-container {
   font-family: GilroyEB;

@@ -10,6 +10,7 @@
   text-transform: lowercase;
   letter-spacing: 1.3px;
   color: #a7a7a7;
+  font-weight: 100;
 }
 
 // Executors
@@ -22,7 +23,7 @@
   font-family: GilroyR;
   font-size: 14px;
   letter-spacing: .3px;
-  margin-bottom: .5rem;
+  margin-bottom: .9rem;
 }
 
 .executor-span {
@@ -34,18 +35,27 @@
 
 .executor-label .executor-span {
   display: inline-block;
-  padding-top: .4rem;
   margin-right: .8rem;
 }
 
 .customer-input {
   display: inline-block;
+  font-family: GilroyR;
+  font-size: pxToRem(14px);
   width: 70%;
   border: none;
   border-bottom: 1px solid #a7a7a7;
   &:focus {
     outline: none;
   }
+  &::-webkit-input-placeholder       {text-indent: 0px;   transition: text-indent 0.3s ease;}
+  &::-moz-placeholder                {text-indent: 0px;   transition: text-indent 0.3s ease;}
+  &:-moz-placeholder                 {text-indent: 0px;   transition: text-indent 0.3s ease;}
+  &:-ms-input-placeholder            {text-indent: 0px;   transition: text-indent 0.3s ease;}
+  &:focus::-webkit-input-placeholder {text-indent: 500px; transition: text-indent 0.3s ease;}
+  &:focus::-moz-placeholder          {text-indent: 500px; transition: text-indent 0.3s ease;}
+  &:focus:-moz-placeholder           {text-indent: 500px; transition: text-indent 0.3s ease;}
+  &:focus:-ms-input-placeholder      {text-indent: 500px; transition: text-indent 0.3s ease;}
 }
 
 .executor-label {
