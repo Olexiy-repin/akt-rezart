@@ -39,7 +39,7 @@ $baseFontSize: 16px;
   transform: translate(-50%, -50%);
   background-color: #fefefe;
   margin: auto;
-  width: 22%;
+  width: 26.2rem;
   text-align: center;
   animation-name: modal-appear;
   animation-timing-function: linear;
@@ -105,5 +105,18 @@ $baseFontSize: 16px;
     transition: all .3s;
     background-color: rgb(28, 84, 233);
     box-shadow: 0 0 33.6px 1.4px rgba(28,84,233,.8);
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 19rem;
+    padding: 43px 21px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .modal-content {
+    width: 23rem;
   }
 }
