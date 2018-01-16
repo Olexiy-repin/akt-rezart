@@ -9,6 +9,7 @@
 .form__title-span {
   text-transform: lowercase;
   letter-spacing: 1.3px;
+  color: #a7a7a7;
 }
 
 // Executors
@@ -21,7 +22,7 @@
   font-family: GilroyR;
   font-size: 14px;
   letter-spacing: .3px;
-  margin-bottom: .4rem;
+  margin-bottom: .5rem;
 }
 
 .executor-span {
@@ -33,7 +34,7 @@
 
 .executor-label .executor-span {
   display: inline-block;
-  padding-top: .5rem;
+  padding-top: .4rem;
   margin-right: .8rem;
 }
 
@@ -41,7 +42,7 @@
   display: inline-block;
   width: 70%;
   border: none;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #a7a7a7;
   &:focus {
     outline: none;
   }
