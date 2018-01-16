@@ -73,13 +73,16 @@ $baseFontSize: 16px;
 
 .modal-title {
   font-family: GilroyEB;
+  font-weight: 100;
   font-size: pxToRem(24px);
   text-transform: uppercase;
   margin-bottom: 1.1rem;
+  letter-spacing: .1rem;
 }
 
 .modal-paragraph {
   font-family: GilroyR;
+  font-weight: 100;
   font-size: pxToRem(14px);
   line-height: 1.4;
   letter-spacing: .3px;
