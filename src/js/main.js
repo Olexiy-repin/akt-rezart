@@ -1,53 +1,110 @@
-$('#access-check').attr("style","opacity: 0.3;");
+(() => {
+  const inputTop = $('.i_fio');
+  const inputBottom = $('.b_fio');
 
-      $("input.i_fio").keyup(function(){
-				 $("input.b_fio").val($(this).val());
-				 if (!$(this).val() == '') {
-				 	$("#check").removeAttr("disabled");
-          $('#access-check').attr("style","opacity: 1;");
-				 } else {
-				    $("[name=send]").attr('disabled', true);
-				    $("#check").attr('disabled', true);
-            $('#access-check').attr("style","opacity: 0.3;");
-				 }
-			});
+  const months = 'января февраля марта апреля мая июня июля августа сентября октября ноября декабря'
+    .split(' ');
 
-			$("input.b_fio").keyup(function(){
-				 $("input.i_fio").val($(this).val());
-            if (!$(this).val() == '') {
-				 	$("#check").removeAttr("disabled");
-          $('#access-check').attr("style","opacity: 1;");
-				 } else {
-				    $("[name=send]").attr('disabled', true);
-				    $("#check").attr('disabled', true);
-            $('#access-check').attr("style","opacity: 0.3;");
-				 }
-			});
-			// $("input.i_data").keyup(function(){
-			// 	 $("input.b_data").val($(this).val());
-			// });
-			// $("input.i_month").keyup(function(){
-			// 	 $("input.b_month").val($(this).val());
-			// });
+  /* set current date */
+  (() => {
+    const date = new Date();
+    const dateString = `${date.getDate()} ${months[date.getMonth()]}`;
 
-// var href;
-var div = $('#anim');
-  $("input[name=confirm]").change(function(){
-    if($(this).is(":checked")){
-      // div = document.createElement('img');
-      // img.src = "img/signature.gif";
+    $('.date-target').text(dateString);
+    $('.current-year').text(date.getFullYear());
+  })();
 
+  const signature = (() => {
+    const el = $('.signature-instance');
+    const src = el.attr('src');
 
-/* Once the image has loaded, set it as the background-image */
-      // $(div).load(function(){
-      //   div.css({backgroundImage: 'url("img/signature.gif")'});
-      // });
+    function show() {
+      el.show(200);
+      setTimeout(() => el.attr('src', src), 0);
+    }
 
-      setTimeout(function(){  $("[name=send]").removeAttr("disabled"); }, 2500);
+    function hide() {
+      el.hide(200);
+    }
 
-    }else{
-      	// $(".btn_conf").addClass('disabled').removeAttr("href");
-        $("[name=send]").attr('disabled', true);
-      	div.css({backgroundImage: "none"});
+    return { show, hide };
+  })();
+
+  const button = (() => {
+    const el = $('.access-btn');
+    let timer;
+
+    function enable() {
+      timer = setInterval(() => {
+        el.prop('disabled', false);
+      }, 2000);
+    }
+
+    function disable() {
+      clearInterval(timer);
+
+      el.prop('disabled', true);
+    }
+
+    return { enable, disable };
+  })();
+
+  const checkbox = (() => {
+    const wrap = $('#access-check');
+    const el = wrap.find('#check');
+
+    function enable() {
+      el.prop('disabled', false);
+      wrap.css('opacity', 1);
+    }
+
+    function disable() {
+      el.prop('checked', false);
+      el.prop('disabled', true);
+      wrap.css('opacity', 0.3);
+    }
+
+    el.on('change', (event) => {
+      const { checked } = event.target;
+
+      if (checked) {
+        signature.show();
+        button.enable();
+      } else {
+        signature.hide();
+        button.disable();
       }
-});
+    });
+
+    disable();
+
+    return { enable, disable };
+  })();
+
+  inputTop.on('input', ({ target }) => {
+    const value = $(target).val();
+    inputBottom.val(value);
+
+    if (value) {
+      checkbox.enable();
+    } else {
+      checkbox.disable();
+      button.disable();
+      signature.hide();
+    }
+  });
+
+  inputBottom.on('input', ({ target }) => {
+    const value = $(target).val();
+    inputTop.val(value);
+
+    if (value) {
+      checkbox.enable();
+    } else {
+      checkbox.disable();
+      button.disable();
+      signature.hide();
+    }
+  });
+})();
+

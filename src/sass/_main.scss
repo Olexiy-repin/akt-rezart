@@ -20,16 +20,35 @@ body {
   padding: 3.2rem 0;
 }
 
+.container {
+  min-width: pxToRem(320px);
+  max-width: pxToRem(1200px);
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .paper {
   background-color: #fff;
-  margin: auto;
-  // width: 38%;
-  width: 45rem;
+  width: 60%;
   padding: 2.8rem 5.7rem 6.3rem 5.7rem;
 }
 
-.container {
-  min-width: pxToRem(320px);
-  max-width: pxToRem(1156px);
-  margin: auto;
+@media (max-width: 768px) {
+  body {
+    background-size: cover;
+  }
+
+  .paper {
+    background-color: #fff;
+    width: 100%;
+    padding: 2.8rem 2.7rem 6.3rem 2.7rem;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1085px) {
+  body {
+    background-size: cover;
+  }
 }

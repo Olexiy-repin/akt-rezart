@@ -11,8 +11,8 @@
   <link rel="stylesheet" href="modal.css">
 </head>
 <body>
-  <div class="paper">
-    <div class="container">
+  <div class="container">
+    <div class="paper">
       <header class="header">
         <div class="header__logo-container">
           <a href="#" class="header__logo">
@@ -22,14 +22,21 @@
         </div>
         <div class="header__date-container">
           <p class="header__akt-number">Акт № 0022</p>
-          <p class="header__date-time">от 06 ноября 2017</p>
+          <p class="header__date-time">
+            от
+            <span class="date-target"></span>
+            <span class="current-year"></span>
+          </p>
         </div>
       </header>
       <form action="#" class="form">
         <h2 class="form__title">о приеме выполненных работ <span class="form__title-span">(оказаных услуг)</span></h2>
         <div class="contract-executors-container">
           <p class="contract-executors-container__executor"><span class="executor-span">Исполнитель:</span> Digital-агентство Rezart</p>
-          <label class="executor-label"><span class="executor-span">Заказчик: </span><input class="customer-input i_fio" type="text"></label>
+          <label class="executor-label">
+            <span class="executor-span">Заказчик:</span>
+            <input class="customer-input i_fio">
+          </label>
         </div>
         <div class="form__content">
           <h3 class="form__list-title">Наименование работ/услуг:</h3>
@@ -45,28 +52,40 @@
         <div class="signature-block">
           <div class="contract-executors-container">
             <p class="contract-executors-container__executor"><span class="executor-span">Исполнитель:</span> Digital-агентство Rezart</p>
-            <label class="executor-label"><span class="executor-span">Заказчик: </span><input class="customer-input b_fio" type="text"></label>
+            <label class="executor-label">
+              <span class="executor-span">Заказчик:</span>
+              <input class="customer-input b_fio">
+            </label>
           </div>
-          <div class="signature-block__date">6 ноября</div>
-          <div class="signature-block__sign-gif" id="anim"></div>
+          <div class="signature-wrap">
+            <div class="signature-block__date date-target">6 ноября</div>
+            <div class="signature-block__sign-gif" id="anim">
+              <img class="signature-instance" src="./img/signature.gif" alt="sign">
+            </div>
+          </div>
         </div>
         <label id="access-check" class="access-checkbox-label">
           <input id="check" class="checkbox-input" type="checkbox" name="confirm" disabled>
           <span class="checkbox-description">Я подтверждаю выполнение этапа концепции и принимаю его</span>
         </label>
         <div class="button-container">
-          <button type="button" name="send" class="access-btn modal-trigger" data-modal="#myModal" disabled>подтверждаю</button>
+          <button type="button" name="send" class="access-btn modal-trigger" data-modal="#myModal" disabled>
+            подтверждаю
+          </button>
         </div>
       </form>
 
       <div id="myModal" class="modal">
-  <div class="modal-content">
-        <span class="bottom-close">&times;</span>
-        <h2 class="modal-title">спасибо!</h2>
-        <p class="modal-paragraph">Мы приняли ваше подтверждение <br> и продолжаем работу над проектом. <span class="modal-span">Хорошего вам дня!</span> </p>
-        <button class="modal-btn">ок</button>
-  </div>
-</div>
+        <div class="modal-content">
+          <span class="bottom-close">&times;</span>
+          <h2 class="modal-title">спасибо!</h2>
+          <p class="modal-paragraph">
+            Мы приняли ваше подтверждение<br />и продолжаем работу над проектом.
+            <span class="modal-span">Хорошего вам дня!</span>
+          </p>
+          <button class="modal-btn">ок</button>
+        </div>
+      </div>
     </div>
   </div>
 <script src="js/jquery.min.js"></script>

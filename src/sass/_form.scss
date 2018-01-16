@@ -14,6 +14,7 @@
 // Executors
 .contract-executors-container {
   margin-bottom: 3.2rem;
+  width: 17rem;
 }
 
 .contract-executors-container__executor {
@@ -48,7 +49,7 @@
 
 .executor-label {
   display: flex;
-  width: 50%;
+  width: 100%;
   align-items: center;
 }
 
@@ -101,14 +102,23 @@
   }
 }
 
-.signature-block__sign-gif {
-  display: none;
-}
-
 .signature-block__date {
   font-family: GilroyR;
   font-size: pxToRem(14px);
-  align-self: flex-end;
+  height: 31px;
+}
+
+.signature-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(50%);
+}
+
+.signature-instance {
+  transform: translateY(-5px);
+  margin-left: 10px;
+  display: none;
 }
 
 .access-checkbox-label {
@@ -176,5 +186,59 @@
     transition: all .3s;
     background-color: rgb(28, 84, 233);
     box-shadow: 0 0 33.6px 1.4px rgba(28,84,233,.8);
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header__akt-number {
+    text-align: center;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form__title {
+    text-align: center;
+  }
+
+  .executor-label {
+    width: 100%;
+  }
+
+  .signature-block .contract-executors-container {
+    width: 100%;
+  }
+
+  .signature-block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .access-btn {
+    padding: 1rem 3.2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .signature-block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .signature-wrap {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .signature-block .contract-executors-container {
+    width: 17rem;
   }
 }
