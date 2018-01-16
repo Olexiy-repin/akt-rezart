@@ -27,7 +27,8 @@ $baseFontSize: 16px;
   }
 
   to {
-    transform: translate(-50%, -50%) rotateY(0deg);
+    // transform: translate(-50%, -50%) rotateY(0deg);
+    transform: rotateY(0deg) translate(-50%, -50%);
   }
 }
 
@@ -76,8 +77,11 @@ $baseFontSize: 16px;
   font-weight: 100;
   font-size: pxToRem(24px);
   text-transform: uppercase;
-  margin-bottom: 1.1rem;
-  letter-spacing: .1rem;
+  margin-bottom: 17.6px;
+  letter-spacing: 1.6px;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .modal-paragraph {
@@ -90,8 +94,8 @@ $baseFontSize: 16px;
 
 .modal-span {
   display: block;
-  margin-top: .5rem;
-  margin-bottom: 1.6rem;
+  margin-top: .8px;
+  margin-bottom: 25.6px;
 }
 
 .modal-btn {
